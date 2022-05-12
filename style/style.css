@@ -122,6 +122,7 @@ header nav a:hover, header nav a.active {
   width: 100%;
   background: #f1f1f1;
   padding: 80px 0;
+  padding-bottom: 150px;
 }
 #skills h2 {
   color: #c0392b;
@@ -135,7 +136,6 @@ header nav a:hover, header nav a.active {
   width: 8px;
   margin: 0 auto;
   background: #333;
-  border: 1px solid #c0392b;
 }
 #skills .rond {
   width: 80px;
@@ -167,13 +167,13 @@ header nav a:hover, header nav a.active {
   width: 400px;
   min-height: 200px;
   padding: 20px;
-  border-radius: 1em;
   height: auto;
   background: #f1f1f1;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+  border: 1px solid #c0392b;
 }
 #skills .b1 {
   top: 330px;
