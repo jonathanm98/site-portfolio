@@ -15,9 +15,9 @@
 
       <nav>
         <a id="n1" href="#home">Accueil</a>
-        <a id="n2" href="#skills">Compétences</a>
         <a id="n3" href="#projects">Projets</a>
-        <a id="n4">Contact</a>
+        <a id="n2" href="#skills">Compétences</a>
+        <a id="n4" href="#contact">Contact</a>
       </nav>
     </header>
     <main>
@@ -28,11 +28,11 @@
           <span>Boutique e-commerce</span>
           <span>Applications Web</span>
         </h3>
-        <button>Voir mes réalisations</button>
+        <a href="#projects"><button>Voir mes réalisations</button></a>
       </div>
 
-      <div id="skills">
-        <h2>Mes compétences</h2>
+      <div id="projects">
+        <h2>Mes projets</h2>
 
         <div class="ligne"></div>
 
@@ -42,40 +42,143 @@
         <div class="rond r4" data-anim="4"></div>
 
         <div class="box b1" data-anim="1">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam
-            labore vitae asperiores architecto, in nemo debitis eligendi, earum
-            nam ipsam? Corporis est blanditiis nulla.
-          </p>
+          <video autoplay loop>
+            <source src="videos/ohmyfood.mp4" type="video/mp4" />
+            <!-- <source src="movie.ogg" type="video/ogg" /> -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="content">
+            <h3>Ce site - jmenelet.fr</h3>
+            <ul>
+              <li>Intégration web HTML - CSS (SASS)</li>
+              <li>Site Responsive (compatible tous supports)</li>
+              <li>Animations CSS modernes</li>
+            </ul>
+            <div class="buttons">
+              <input
+                class="disactivated"
+                type="button"
+                value="Vous ête sur ce site"
+              />
+              <input
+                type="button"
+                onclick="location.href='https://github.com/jonathanm98/site-portfolio';"
+                value="Voir le code source"
+              />
+            </div>
+          </div>
         </div>
         <div class="box b2" data-anim="2">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam
-            labore vitae asperiores architecto, in nemo debitis eligendi, earum
-            nam ipsam? Corporis est blanditiis nulla.
-          </p>
+          <video autoplay loop>
+            <source src="videos/groupomania.mp4" type="video/mp4" />
+            <!-- <source src="movie.ogg" type="video/ogg" /> -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="content">
+            <h3>Groupomania</h3>
+            <ul>
+              <li>Création d'une application Front avec React/Redux</li>
+              <li>Authentifier un utilisateur et maintenir sa session</li>
+              <li>
+                Implémenter un stockage de données sécurisé en utilisant SQL
+              </li>
+              <li>Personnaliser le contenu envoyé à un client web</li>
+            </ul>
+            <div class="buttons">
+              <input
+                class="disactivated"
+                type="button"
+                value="Site non disponible"
+              />
+              <input
+                type="button"
+                onclick="location.href='https://github.com/jonathanm98/grouponamia';"
+                value="Voir le code source"
+              />
+            </div>
+          </div>
         </div>
         <div class="box b3" data-anim="3">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam
-            labore vitae asperiores architecto, in nemo debitis eligendi, earum
-            nam ipsam? Corporis est blanditiis nulla.
-          </p>
+          <video autoplay loop>
+            <source src="videos/kanap.mp4" type="video/mp4" />
+            <!-- <source src="movie.ogg" type="video/ogg" /> -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="content">
+            <h3>Kanap</h3>
+            <ul>
+              <li>Affichage de produits dynamique depuis une API</li>
+              <li>
+                Créer un panier de manière persistante en utilisant le Local
+                Storage
+              </li>
+              <li>Gérer des événements JavaScript</li>
+            </ul>
+            <div class="buttons">
+              <input
+                type="button"
+                onclick="location.href='https://jonathanm98.github.io/kanap/';"
+                value="Voir le site"
+              />
+              <input
+                type="button"
+                onclick="location.href='https://github.com/jonathanm98/kanap';"
+                value="Voir le code source"
+              />
+            </div>
+          </div>
         </div>
         <div class="box b4" data-anim="4">
-          <h3>Lorem ipsum dolor sit amet.</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam totam
-            labore vitae asperiores architecto, in nemo debitis eligendi, earum
-            nam ipsam? Corporis est blanditiis nulla.
-          </p>
+          <video autoplay loop>
+            <source src="videos/ohmyfood.mp4" type="video/mp4" />
+            <!-- <source src="movie.ogg" type="video/ogg" /> -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="content">
+            <h3>Oh My Food</h3>
+            <ul>
+              <li>Intégration web HTML - CSS (SASS)</li>
+              <li>Site Responsive (compatible tous supports)</li>
+              <li>Animations CSS modernes</li>
+            </ul>
+            <div class="buttons">
+              <input
+                type="button"
+                onclick="location.href='https://jonathanm98.github.io/ohmyfood/';"
+                value="Voir le site"
+              />
+              <input
+                type="button"
+                onclick="location.href='https://github.com/jonathanm98/ohmyfood';"
+                value="Voir le code source"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <div id="projects"></div>
+      <div id="skills"></div>
+      <div id="contact">
+        <h2>Ou me retrouver</h2>
+        <div class="form-div">
+          <form method="POST" action="contact.php">
+            <label for="name">Votre nom :</label>
+            <input type="text" name="name" required />
+            <label for="email">Votre email :</label>
+            <input type="email" name="email" required />
+            <label for="sujet">Entête de votre demande :</label>
+            <input type="text" name="sujet" required />
+            <label for="message">Votre message :</label>
+            <input class="message" type="text" name="message" required />
+            <input type="submit" value="Envoyer le message" />
+          </form>
+          <div class="social">
+            <p>fdsfsdf</p>
+            <p>fdsfsdf</p>
+            <p>fdsfsdf</p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>

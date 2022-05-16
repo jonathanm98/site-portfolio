@@ -3,9 +3,8 @@ const allBoxes = document.querySelectorAll(".box");
 
 const home = document.querySelector("#home");
 const skills = document.querySelector("#skills");
-// const projects = document.querySelector("#skills");
-// const contact = document.querySelector("#skills");
-const allNavs = document.querySelectorAll("header a");
+const projects = document.querySelector("#projects");
+const contact = document.querySelector("#contact");
 
 const controller = new ScrollMagic.Controller();
 
@@ -23,8 +22,9 @@ allBoxes.forEach((box) => {
 
       let scene = new ScrollMagic.Scene({
         triggerElement: allRonds[i],
-        reverse: false,
+        reverse: true,
       })
+        .triggerHook(0.7)
         .setTween(tween)
         .addTo(controller);
     }
@@ -36,13 +36,32 @@ new ScrollMagic.Scene({
   duration: home.clientHeight,
 })
   .setClassToggle("#n1", "active")
-  .addIndicators()
+  .triggerHook(0.7)
   .addTo(controller);
+
 new ScrollMagic.Scene({
   triggerElement: skills,
   reverse: true,
   duration: skills.clientHeight,
 })
   .setClassToggle("#n2", "active")
-  .addIndicators()
+  .triggerHook(0.7)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: projects,
+  reverse: true,
+  duration: projects.clientHeight,
+})
+  .setClassToggle("#n3", "active")
+  .triggerHook(0.7)
+  .addTo(controller);
+
+new ScrollMagic.Scene({
+  triggerElement: contact,
+  reverse: true,
+  duration: contact.clientHeight,
+})
+  .setClassToggle("#n4", "active")
+  .triggerHook(0.7)
   .addTo(controller);

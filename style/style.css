@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -19,6 +20,7 @@ h6,
 p,
 ol,
 ul {
+  scroll-behavior: smooth;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -26,9 +28,14 @@ ul {
   font-size: 1.5rem;
 }
 
-ol,
 ul {
   list-style: none;
+}
+
+ul li:before {
+  content: "✓";
+  margin-right: 10px;
+  font-weight: 800;
 }
 
 a {
@@ -36,9 +43,8 @@ a {
   color: inherit;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+input:focus {
+  outline: none;
 }
 
 header {
@@ -91,7 +97,7 @@ header nav a:hover, header nav a.active {
   background-attachment: fixed;
   color: white;
   text-shadow: 0px 0px 1px #c0392b;
-  box-shadow: 0px 1px 15px #000;
+  box-shadow: 0px 1px 15px #fff;
 }
 #home h2 {
   color: #c0392b;
@@ -115,97 +121,195 @@ header nav a:hover, header nav a.active {
   cursor: pointer;
 }
 
-#skills {
+#projects {
   position: relative;
   min-height: 100vh;
   height: auto;
   width: 100%;
-  background: #f1f1f1;
   padding: 80px 0;
   padding-bottom: 150px;
 }
-#skills h2 {
+#projects h2 {
   color: #c0392b;
   font-size: 2.6em;
   font-weight: 800;
   text-align: center;
   margin-bottom: 200px;
 }
-#skills .ligne {
+#projects .ligne {
   height: 1000px;
   width: 8px;
   margin: 0 auto;
   background: #333;
 }
-#skills .rond {
+#projects .rond {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   background: #333;
   position: absolute;
-  border: 1px solid #c0392b;
   left: 50%;
   transform: translate(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#skills .r1 {
+#projects .rond img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+#projects .r1 {
   top: 330px;
 }
-#skills .r2 {
+#projects .r2 {
   top: 656px;
 }
-#skills .r3 {
+#projects .r3 {
   top: 962px;
 }
-#skills .r4 {
+#projects .r4 {
   top: 1260px;
 }
-#skills .box {
+#projects .box {
   color: #333;
-  width: 400px;
+  max-width: 400px;
+  width: auto;
   min-height: 200px;
-  padding: 20px;
   height: auto;
   background: #f1f1f1;
+  border-radius: 1em;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   border: 1px solid #c0392b;
 }
-#skills .b1 {
+#projects .box .content {
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+#projects .box h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+#projects .box ul {
+  padding-bottom: 20px;
+}
+#projects .box video {
+  border-radius: 1em 1em 0 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+#projects .box .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#projects .box .buttons input[type=button] {
+  background: #c0392b;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  color: #fff;
+  cursor: pointer;
+}
+#projects .box .buttons input[type=button].disactivated {
+  background: rgba(192, 58, 43, 0.3843137255);
+  cursor: not-allowed;
+}
+#projects .b1 {
   top: 330px;
   left: calc(50% + 270px);
 }
-#skills .b2 {
+#projects .b2 {
   top: 656px;
   left: calc(50% - 270px);
 }
-#skills .b3 {
+#projects .b3 {
   top: 962px;
   left: calc(50% + 270px);
 }
-#skills .b4 {
+#projects .b4 {
   top: 1260px;
   left: calc(50% - 270px);
 }
 @media screen and (max-width: 1000px) {
-  #skills .ligne {
+  #projects {
+    height: 2500px;
+  }
+  #projects .ligne {
     position: relative;
     left: 40%;
+    display: none;
   }
-  #skills .rond {
-    left: 90%;
+  #projects .rond {
+    opacity: 0;
   }
-  #skills .box {
-    left: 40%;
+  #projects .b1,
+#projects .r1 {
+    top: 8%;
+  }
+  #projects .b2,
+#projects .r2 {
+    top: 30.5%;
+  }
+  #projects .b3,
+#projects .r3 {
+    top: 53.5%;
+  }
+  #projects .b4,
+#projects .r4 {
+    top: 75.5%;
+  }
+  #projects .box {
+    left: 50%;
+    max-width: 60%;
+    width: 60%;
   }
 }
 
-#projects {
+#skills {
   min-height: 100vh;
+}
+
+#contact {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid black;
+  color: #fff;
+}
+#contact h2 {
+  color: #c0392b;
+  font-size: 2.6em;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 80px;
+}
+#contact .form-div {
+  display: flex;
+  justify-content: space-around;
+}
+#contact .form-div form {
+  display: flex;
+  flex-direction: column;
+}
+#contact .form-div form .message {
+  width: 200px;
+}
+#contact .form-div form input:focus {
+  outline: #333;
+}
+#contact .form-div form input:not([type=submit]) {
+  margin-bottom: 20px;
+}
+#contact .form-div form input[type=submit] {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
