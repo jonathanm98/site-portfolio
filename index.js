@@ -1,5 +1,11 @@
 const allRonds = document.querySelectorAll(".rond");
 const allBoxes = document.querySelectorAll(".box");
+const imgs = document.querySelectorAll(".parallax-container img");
+var scene = document.getElementById("parallax-container");
+var parallaxInstance = new Parallax(scene, {
+  relativeInput: true,
+  hoverOnly: true,
+});
 
 const home = document.querySelector("#home");
 const skills = document.querySelector("#skills");
@@ -22,7 +28,7 @@ allBoxes.forEach((box) => {
 
       let scene = new ScrollMagic.Scene({
         triggerElement: allRonds[i],
-        reverse: true,
+        reverse: false,
       })
         .triggerHook(0.7)
         .setTween(tween)
